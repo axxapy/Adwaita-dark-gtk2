@@ -1,0 +1,19 @@
+# Menubar [Dark]
+style "murrine-menubar" {
+
+    bg[NORMAL]          = "#363B3B"
+    bg[INSENSITIVE]     = "#181818"
+    base[NORMAL]        = "#363B3B"
+    base[INSENSITIVE]   = "#181818"
+    fg[NORMAL]          = "#ffffff"
+    fg[INSENSITIVE]     = "#484848"
+    fg[SELECTED]        = @fg_color
+    text[NORMAL]        = "#ffffff"
+    text[INSENSITIVE]   = "#484848"
+
+  engine "murrine" {
+    roundness	 = 3
+  }
+}
+
+widget_class "*<GtkMenuBar>*"                  style "murrine-menubar"
