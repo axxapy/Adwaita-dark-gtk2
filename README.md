@@ -8,11 +8,27 @@ There is still minor issues, but work in progress
 INSTALLATION
 =================
 
-$ cd /usr/share/themes
+#### 1. Install theme itself
 
-$ sudo git clone https://github.com/axxapy/Adwaita-dark-gtk2.git Adwaita-dark
+* go to the themes folder:
+`$ cd /usr/share/themes`
+* clone theme's repo:
+`$ sudo git clone https://github.com/axxapy/Adwaita-dark-gtk2.git Adwaita-dark`
+* launch gnome-tweak-tool
+* go to Appearance section
+* change "Window" and "GTK+" themes to Adwaita-dark
 
-Then you need to launch gnome-tweak-tool, go to Appearance section and change "Window" and "GTK+" Themes to Adwaita-dark
+#### 2. Configure gnome apps
+##### Gnome Terminal
+* Open gnome-terminal
+* go to Edit->Preferences menu
+* select "Use dark theme variant" checkbox
+
+##### Gedit
+* Open gedit
+* go to Preferences (by clicking on the name of application in the top panel of gnome-shell)
+* Open tab "Font and Colors"
+* Select any dark theme you like (I prefer Oblivion)
 
 AUTHORS
 =================
