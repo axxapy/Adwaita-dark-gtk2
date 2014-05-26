@@ -655,6 +655,19 @@ style "radiobutton" {
  }
 }
 
+style "murrine-radiobutton" = "murrine-wider" {
+ ythickness  = 4
+ bg[PRELIGHT] = @selected_bg_color
+ bg[ACTIVE] = @selected_bg_color
+ bg[SELECTED] = @bg_color
+
+ engine "murrine" {
+ gradient_shades = {1.05, .99, .99, .91}
+    contrast    = .72
+ }
+
+}
+
 # Matches
 class "GtkWidget"               style "murrine-default"
 class "GtkToolbar"               style "murrine-default"
@@ -691,7 +704,7 @@ widget_class "*.<GtkFrame>.<GtkLabel>"     style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        style "murrine-treeview"
 widget_class "*<GtkProgressBar>"        style "murrine-progressbar"
 widget_class "*<GtkCheckButton>*"       style:highest "checkbutton"
-widget_class "*<GtkRadioButton>*"       style:highest "radiobutton"
+widget_class "*<GtkRadioButton>*"       style:highest "murrine-radiobutton"
 widget_class "*.<GtkTreeView>.<GtkButton>"   style "murrine-treeview-header"
 widget_class "*.<GtkCTree>.<GtkButton>"    style "murrine-treeview-header"
 widget_class "*.<GtkList>.<GtkButton>"     style "murrine-treeview-header"
