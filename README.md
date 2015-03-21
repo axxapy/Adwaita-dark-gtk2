@@ -14,6 +14,8 @@ INSTALLATION
 `$ cd /usr/share/themes`
 * clone theme's repo:
 `$ sudo git clone https://github.com/axxapy/Adwaita-dark-gtk2.git Adwaita-dark`
+* for versions of gnome-shell <= 3.12 switch to 3.12 tag:
+`$ sodu git checkout gnome_3.12`
 * launch gnome-tweak-tool
 * go to Appearance section
 * change "Window" and "GTK+" themes to Adwaita-dark
