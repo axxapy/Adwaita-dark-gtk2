@@ -113,7 +113,7 @@ style "murrine-default" {
  text[PRELIGHT]  = @text_color
  text[ACTIVE]   = @selected_fg_color
  text[SELECTED]  = @selected_fg_color
- text[INSENSITIVE] = darker (@bg_color)
+ text[INSENSITIVE] = mix(0.5, @bg_color, @text_color)
 
  engine "murrine" {
   animation      = FALSE
@@ -229,6 +229,8 @@ style "murrine-menu" = "murrine-nogap" {
  bg[NORMAL] = @base_color # menu background
  fg[PRELIGHT] = "#111"
  text[ACTIVE] = "#111"
+ fg[INSENSITIVE] = mix(0.5, @bg_color, @text_color)
+
  GtkMenuItem::arrow-scaling = .5 # small arrow
 
  engine "murrine" {
