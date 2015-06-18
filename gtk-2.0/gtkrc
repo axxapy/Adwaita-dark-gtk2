@@ -39,7 +39,7 @@ style "murrine-default" {
  GtkScrollbar::has-backward-stepper = 0 
  GtkScrollbar::has-forward-stepper = 0
  GtkScrollbar::min-slider-length = 31
- GtkScrollbar::slider-width = 9
+ GtkScrollbar::slider-width = 6
  GtkScrollbar::trough-border = 2
  GtkScrollbar::activate-slider = 0
 
@@ -318,13 +318,13 @@ style "murrine-scale" {
 
 # Scrollbar
 style "murrine-scrollbar" = "murrine-wider" {
- bg[NORMAL] = shade (.65, @bg_color)
- bg[PRELIGHT] = @selected_bg_color
+ bg[NORMAL] = shade (0.8, @fg_color)
+ bg[PRELIGHT] = @fg_color
  bg[ACTIVE] = @selected_bg_color
 
  engine "murrine" {
  trough_shades = {0.85, 0.85}
- border_shades = { 1.38, 1.38 }
+ border_shades = { 0.85, 0.85 }
  contrast = .0
  roundness = 3
  }
