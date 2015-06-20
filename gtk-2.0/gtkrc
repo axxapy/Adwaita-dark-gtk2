@@ -210,6 +210,8 @@ style "murrine-panel" {
 
 # Menubar
 style "murrine-menubar" {
+  fg[PRELIGHT]  = shade(1.4, @selected_bg_color)
+  bg[PRELIGHT]  = shade(0.95, @bg_color)
 }
 
 style "murrine-menubar-menuitem" = "murrine-wider" {
@@ -243,6 +245,7 @@ style "murrine-menu" = "murrine-nogap" {
 style "murrine-menu-item" {
  xthickness  = 3
  ythickness  = 5
+ fg[PRELIGHT]  = @selected_fg_color
 }
 
 style "murrine-menuitem-separator" = "murrine-wide" {
