@@ -16,8 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-#gtk-color-scheme = "base_color:#ffffff\nbg_color:#ededed\ntooltip_bg_color:#343434\nselected_bg_color:#4a90d9\ntext_color:#2e3436\nfg_color:#2e3436\ntooltip_fg_color:#ffffff\nselected_fg_color:#fff"
-gtk-color-scheme = "base_color:#4f524f\nfg_color:#eeeeec\ntooltip_fg_color:#eeeeee\nselected_bg_color:#3465a4\nselected_fg_color:#eeeeec\ntext_color:#eeeeec\nbg_color:#363b3b\ntooltip_bg_color:#000000"
+gtk-color-scheme = "fg_color:#eeeeec\nbg_color:#393f3f\ntext_color:#ffffff\nbase_color:#292929\nselected_fg_color:#ffffff\nselected_bg_color:#215d9c\ninsensitive_fg_color:#ffffff\ninsensitive_bg_color:#215d9c\ntooltip_fg_color:#ffffff\ntooltip_bg_color:#000000"
 
 gtk-icon-sizes = "gtk-button=16,16:\ngtk-dnd=16,16:\npanel=16,16:\ngtk-small-toolbar=16,16:\ngtk-large-toolbar=24,24:"
 
