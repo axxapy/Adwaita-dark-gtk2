@@ -25,6 +25,9 @@ gtk-auto-mnemonics = 1
 gtk-menu-popup-delay = 100
 
 style "murrine-default" {
+ GtkIMHtml::hyperlink-color = "#6666FF"
+ GtkIMHtml::hyperlink-visited-color = "#7B52A1"
+
  GtkButton::child-displacement-x = 1
  GtkButton::child-displacement-y = 1
  GtkButton::default-border = { 0, 0, 0, 0 }
