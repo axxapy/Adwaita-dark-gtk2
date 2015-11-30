@@ -40,6 +40,25 @@ INSTALLATION
 NOTES ABOUT UTILITIES
 =================
 
+NOTE: these utilities appear to be at least partly broken on gtk
+3.18+.
+
+gtk-color-export relies on getting a single background color from the
+running gtk3 theme to replicate in a gtk2 gtkrc. Unfortunately, the
+concept of a single "background color" doesn't exist in modern gtk3.
+
+Per the documentation of
+https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-style-context-get-background-color:
+
+"This function is far less useful than it seems, and it should not be
+used in newly written code. CSS has no concept of "background color",
+as a background can be an image, or a gradient, or any other pattern
+including solid colors."
+
+Current gtk actually returns solid black when asked for the background
+theme of an element here, suggesting this may be the end of the road
+for automatic synchronization of colors.
+
 These shouldn't be relevant out-of-the box, but may be important if
 the Adwaita theme changes in some way.
 
