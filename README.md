@@ -17,7 +17,7 @@ INSTALLATION
 * clone theme's repo:
 `$ git clone <URI> Adwaita-dark`
 * e.g.:
-  `$ git clone https://github.com/axxapy/Adwaita-dark-gtk2 Adwaita-dark`
+  `$ git clone https://github.com/<github-user>/Adwaita-dark-gtk2 Adwaita-dark`
   * You'll have to use sudo here if installing in a system-wide location
 * for versions of gnome-shell <= 3.12 switch to 3.12 tag:
 `$ sudo git checkout gnome_3.12`
