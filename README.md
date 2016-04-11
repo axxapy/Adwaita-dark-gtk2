@@ -3,7 +3,6 @@ Adwaita-dark-gtk2
 
 This is clone of gnome3 Adwaita theme
 It is tuned to work with GTK-2 application exactly as with GTK-3
-There is still minor issues, but work in progress
 
 INSTALLATION
 =================
@@ -20,7 +19,16 @@ INSTALLATION
 * go to Appearance section
 * change "Window" and "GTK+" themes to Adwaita-dark
 
-#### 2. Configure gnome apps
+#### 2. Gnome 3.20
+Unfurtunately, for gnome 3.20 you have to modify Adwaita theme itself to make it work:
+```
+$ cd /usr/share/themes/Adwaita
+# cp gtk-2.0 gtk-2.0-bkp
+# cp -R ../Adwaita-dark/gtk-2.0 ./
+```
+And use Adwaita as your theme instead of Adwaita-dark
+
+#### 3. Configure gnome apps
 ##### Gnome Terminal
 * Open gnome-terminal
 * go to Edit->Preferences menu
