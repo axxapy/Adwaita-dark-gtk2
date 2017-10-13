@@ -31,11 +31,11 @@ INSTALLATION
 
 #### 2. Gnome 3.20
 Unfurtunately, for gnome 3.18+ you have to modify Adwaita theme itself to make it work.
-
+```
 $ cd /usr/share/themes/Adwaita
 # cp gtk-2.0 gtk-2.0-bkp
 # cp -R ../Adwaita-dark/gtk-2.0 ./
-
+```
 Teh best way is to create a user theme folder under `~/.themes`:
 ```
 $ mkdir -p ~/.themes/Adwaita
