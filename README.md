@@ -25,11 +25,12 @@ INSTALLATION
 * change "Window" and "GTK+" themes to Adwaita-dark
 
 #### 2. Gnome 3.20
-Unfurtunately, for gnome 3.20 you have to modify Adwaita theme itself to make it work:
+Unfurtunately, for gnome 3.20 you have to modify Adwaita theme itself to make it work.
+Teh best way is to create a user theme folder under `~/.themes`:
 ```
-$ cd /usr/share/themes/Adwaita
-# cp gtk-2.0 gtk-2.0-bkp
-# cp -R ../Adwaita-dark/gtk-2.0 ./
+$ mkdir -p ~/.themes/Adwaita
+$ cd ~/.themes/Adwaita
+# ln -s /usr/share/themes/Adwaita-dark/gtk-2.0 .
 ```
 And use Adwaita as your theme instead of Adwaita-dark
 
