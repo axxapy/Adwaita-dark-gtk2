@@ -29,7 +29,7 @@ INSTALLATION
 * go to Appearance section
 * change "Window" and "GTK+" themes to Adwaita-dark
 
-#### 2. Gnome 3.20
+#### 2. Gnome 3.18+
 Unfurtunately, for gnome 3.18+ you have to modify Adwaita theme itself to make it work.
 ```
 $ cd /usr/share/themes/Adwaita
@@ -98,6 +98,6 @@ gtk-color-export/:
 
 AUTHORS
 =================
-originally cloned by Roi M (https://plus.google.com/+RoiMMrNucky/posts/KsybAs8Htgc)
-tuned and updated by axxapy
-further tuned by Jeremy N (https://plus.google.com/102019683200554479931)
+- originally cloned by Roi M (https://plus.google.com/+RoiMMrNucky/posts/KsybAs8Htgc)
+- tuned and adapted for gnome 3.12-3.20 by Alexey M (https://github.com/axxapy)
+- further tuned by Jeremy N (https://plus.google.com/102019683200554479931)
