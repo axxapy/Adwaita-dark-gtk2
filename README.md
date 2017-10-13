@@ -1,3 +1,8 @@
+IRRELEVANT FOR GNOME 3.22.3+
+============================
+
+Starting from gnome 3.22.3 there is official dark variant of Adwaita theme for gtk-2
+
 Adwaita-dark-gtk2
 =================
 
