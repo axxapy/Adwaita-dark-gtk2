@@ -16,8 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-#gtk-color-scheme = "base_color:#ffffff\nbg_color:#ededed\ntooltip_bg_color:#343434\nselected_bg_color:#4a90d9\ntext_color:#2e3436\nfg_color:#2e3436\ntooltip_fg_color:#ffffff\nselected_fg_color:#fff"
-gtk-color-scheme = "base_color:#4f524f\nfg_color:#eeeeec\ntooltip_fg_color:#eeeeee\nselected_bg_color:#3465a4\nselected_fg_color:#eeeeec\ntext_color:#eeeeec\nbg_color:#363b3b\ntooltip_bg_color:#000000"
+gtk-color-scheme = "fg_color:#eeeeec\nbg_color:#393f3f\ntext_color:#ffffff\nbase_color:#292929\nselected_fg_color:#ffffff\nselected_bg_color:#215d9c\ninsensitive_fg_color:#ffffff\ninsensitive_bg_color:#215d9c\ntooltip_fg_color:#ffffff\ntooltip_bg_color:#000000"
 
 gtk-icon-sizes = "gtk-button=16,16:\ngtk-dnd=16,16:\npanel=16,16:\ngtk-small-toolbar=16,16:\ngtk-large-toolbar=24,24:"
 
@@ -26,6 +25,9 @@ gtk-auto-mnemonics = 1
 gtk-menu-popup-delay = 100
 
 style "murrine-default" {
+ GtkIMHtml::hyperlink-color = "#6666FF"
+ GtkIMHtml::hyperlink-visited-color = "#7B52A1"
+
  GtkButton::child-displacement-x = 1
  GtkButton::child-displacement-y = 1
  GtkButton::default-border = { 0, 0, 0, 0 }
@@ -40,9 +42,9 @@ style "murrine-default" {
  GtkScrollbar::has-backward-stepper = 0 
  GtkScrollbar::has-forward-stepper = 0
  GtkScrollbar::min-slider-length = 31
- GtkScrollbar::slider-width = 9
+ GtkScrollbar::slider-width = 7
  GtkScrollbar::trough-border = 2
- GtkScrollbar::activate-slider = 0
+ GtkScrollbar::activate-slider = 1
 
  GtkScrolledWindow::scrollbar-spacing = 0
  GtkScrolledWindow::scrollbars-within-bevel = 1
@@ -114,7 +116,7 @@ style "murrine-default" {
  text[PRELIGHT]  = @text_color
  text[ACTIVE]   = @selected_fg_color
  text[SELECTED]  = @selected_fg_color
- text[INSENSITIVE] = darker (@bg_color)
+ text[INSENSITIVE] = mix(0.5, @bg_color, @text_color)
 
  engine "murrine" {
   animation      = FALSE
@@ -211,6 +213,8 @@ style "murrine-panel" {
 
 # Menubar
 style "murrine-menubar" {
+  fg[PRELIGHT]  = shade(1.4, @selected_bg_color)
+  bg[PRELIGHT]  = shade(0.95, @bg_color)
 }
 
 style "murrine-menubar-menuitem" = "murrine-wider" {
@@ -230,6 +234,8 @@ style "murrine-menu" = "murrine-nogap" {
  bg[NORMAL] = @base_color # menu background
  fg[PRELIGHT] = "#111"
  text[ACTIVE] = "#111"
+ fg[INSENSITIVE] = mix(0.5, @bg_color, @text_color)
+
  GtkMenuItem::arrow-scaling = .5 # small arrow
 
  engine "murrine" {
@@ -242,6 +248,7 @@ style "murrine-menu" = "murrine-nogap" {
 style "murrine-menu-item" {
  xthickness  = 3
  ythickness  = 5
+ fg[PRELIGHT]  = @selected_fg_color
 }
 
 style "murrine-menuitem-separator" = "murrine-wide" {
@@ -317,13 +324,13 @@ style "murrine-scale" {
 
 # Scrollbar
 style "murrine-scrollbar" = "murrine-wider" {
- bg[NORMAL] = shade (.65, @bg_color)
- bg[PRELIGHT] = @selected_bg_color
- bg[ACTIVE] = @selected_bg_color
+ bg[NORMAL] = shade (0.8, @fg_color)
+ bg[PRELIGHT] = @fg_color
+ bg[ACTIVE] = shade(1.4, @selected_bg_color)
 
  engine "murrine" {
  trough_shades = {0.85, 0.85}
- border_shades = { 1.38, 1.38 }
+ border_colors = { @base_color, @base_color }
  contrast = .0
  roundness = 3
  }
